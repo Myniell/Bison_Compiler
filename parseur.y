@@ -9,11 +9,12 @@ int yyerror(const char*); 	/* same for bison */
 %}
 
 %token NOMBRE
+%token PT_VIRG
 %start resultat 		/* axiom */
 
 %%
 
-resultat: expression ;
+resultat: expression PT_VIRG ;
 
 expression:
   expression '+' terme
